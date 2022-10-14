@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<center>
+		<font face="Segoe Print" size="200px">Welcome to</font>
+		<img style="border-radius:50%" src="https://cdn.luogu.com.cn/upload/usericon/352600.png" width="200px" height="200px">
+		<font face="Segoe Print" size="200px">'s Museum!</font>
+	</center>
+	<script type="text/javascript">
+		function drawRoundRect(cxt, x, y, width, height, radius){
+			var pi = Math.PI;
+			cxt.beginPath();
+			cxt.arc(x + radius, y + radius, radius, pi, pi * 3 / 2);
+			cxt.lineTo(width - radius + x, y);
+			cxt.arc(width - radius + x, radius + y, radius, pi * 3 / 2, pi * 2);
+			cxt.lineTo(width + x, height + y - radius);
+			cxt.arc(width - radius + x, height - radius + y, radius, 0, pi * 1 / 2);
+			cxt.lineTo(radius + x, height +y);
+			cxt.arc(radius + x, height - radius + y, radius, pi * 1 / 2, pi);
+			cxt.closePath();
+		}
+		var canvas = document.getElementByld("canvas");
+		canvas.width = 800;
+		canvas.height = 600;
+		var context = canvas.getContext("2d");
+		drawRoundRect(context, 200, 100, 400, 400, 50);
+	</script>	
+</body>
+</html>
