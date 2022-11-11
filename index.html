@@ -7,7 +7,7 @@
 	<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="hashben.js"></script>
+	<script src="theme.js"></script>
 </head>
 <body style="background: #EEE;">
 	<div class="mdui-appbar mdui-color-theme">
@@ -17,6 +17,9 @@
 			</a>
 			<span><font size="5px" face="Consolas">Hashben Museum</font></span>
 			<div class="mdui-toolbar-spacer"></div>
+			<span class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#theme'}">
+				<i class="mdui-icon material-icons">&#xe40a;</i>
+			</span>
 			<a href="https://hexuben.github.io/busstop" class="mdui-btn mdui-btn-icon">
 				<i class="mdui-icon material-icons">&#xeb3c;</i>
 			</a>
@@ -25,6 +28,32 @@
 			<a href="" class="mdui-ripper mdui-ripper-white mdui-tab-active">主页</a>
 			<a href="https://hexuben.github.io/problem" class="mdui-ripper mdui-ripper-white">题库</a>
 			<a href="https://hexuben.github.io/blogs" class="mdui-ripper mdui-ripper-white">博客</a>
+		</div>
+	</div>
+	<div class="mdui-dialog" id="theme">
+		<div class="mdui-dialog-title">Theme Settings</div>
+		<div class="mdui-dialog-content">
+			You can set theme here.
+			<form>
+				<div class="mdui-col">
+					<label class="mdui-radio">
+						<input type="radio" name="group1"/>
+						<i class="mdui-radio-icon"></i>
+						test
+					</label>
+				</div>
+				<div class="mdui-col">
+					<label class="mdui-radio">
+						<input type="radio" name="group1"/>
+						<i class="mdui-radio-icon"></i>
+						test
+					</label>
+				</div>
+			</form>
+		</div>
+		<div class="mdui-dialog-actions">
+			<button class="mdui-btn mdui-ripple" mdui-dialog-close>cancel</button>
+			<button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
 		</div>
 	</div>
 </body>
