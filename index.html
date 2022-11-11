@@ -33,23 +33,22 @@
 	<div class="mdui-dialog" id="theme">
 		<div class="mdui-dialog-title">Theme Settings</div>
 		<div class="mdui-dialog-content">
-			You can set theme here.
-			<form>
-				<div class="mdui-col">
-					<label class="mdui-radio">
-						<input type="radio" name="group1"/>
-						<i class="mdui-radio-icon"></i>
-						test
-					</label>
-				</div>
-				<div class="mdui-col">
-					<label class="mdui-radio">
-						<input type="radio" name="group1"/>
-						<i class="mdui-radio-icon"></i>
-						test
-					</label>
-				</div>
-			</form>
+			You can set theme here.<br><br>
+			<div class="mdui-chip mdui-color-indigo">
+				<a onclick="changeTheme('indigo');">
+					<span class="mdui-chip-title">Indigo</span>
+				</a>
+			</div>
+			<div class="mdui-chip mdui-color-red">
+				<a onclick="changeTheme('red');">
+					<span class="mdui-chip-title">Red</span>
+				</a>
+			</div>
+			<div class="mdui-chip mdui-color-deep-purple">
+				<a onclick="changeTheme('deep-purple');">
+					<span class="mdui-chip-title">Deep Purple</span>
+				</a>
+			</div>
 		</div>
 		<div class="mdui-dialog-actions">
 			<button class="mdui-btn mdui-ripple" mdui-dialog-close>cancel</button>
