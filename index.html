@@ -7,7 +7,7 @@
 	<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="theme.js"></script>
+	<script src="tools.js"></script>
 </head>
 <body style="background: #EEE;">
 	<div class="mdui-appbar mdui-color-theme">
@@ -25,11 +25,28 @@
 			</a>
 		</div>
 		<div class="mdui-tab mdui-color-theme" mdui-tab>
-			<a href="" class="mdui-ripper mdui-ripper-white mdui-tab-active">主页</a>
-			<a href="https://hexuben.github.io/problem" class="mdui-ripper mdui-ripper-white">题库</a>
-			<a href="https://hexuben.github.io/blogs" class="mdui-ripper mdui-ripper-white">博客</a>
-			<div class="mdui-tab-indicator" style="left: 0px; width: 100%;"></div>
+			<a href="#index" class="mdui-ripper mdui-ripper-white mdui-tab-active">主页</a>
+			<a href="#problem" class="mdui-ripper mdui-ripper-white">题库</a>
+			<a href="#blogs" class="mdui-ripper mdui-ripper-white">博客</a>
 		</div>
+	</div>
+	<div id="problem">
+		<br>
+		<div class="mdui-row">
+			<div class="mdui-col-xs-12">
+				<div class="mdui-container mdui-shadow-2" style="background: #ffffffbb">
+					<br>
+					<center>
+						<div style="font-size: 32px; font-weight: 700;">
+							Hashben Problem
+						</div>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="blogs">
+		
 	</div>
 	<div class="mdui-dialog" id="theme">
 		<div class="mdui-dialog-title">Theme Settings</div>
