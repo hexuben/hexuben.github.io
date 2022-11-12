@@ -15,7 +15,7 @@ function changeTheme(theme) {
 }
 $(document).ready(function(){
     if(localStorage.maincolor==undefined)
-        localStorage.maincolor="deep-purple";
+        localStorage.maincolor="indigo";
     var maincolor=localStorage.maincolor;
     $('body').addClass("mdui-theme-primary-"+maincolor);
 });
