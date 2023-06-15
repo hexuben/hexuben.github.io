@@ -12,27 +12,27 @@
 
 {singer 2}
 
-se me te    sa yi go na ra
+se me te sa i go na ra
 
-せめて最後（さいご）なら　
+せめて最<さい>後<ご>なら　
 
 （如果这已经是最后）
 
 mu ku na  e ga o no
 
-無垢（むく）な笑顔（えがお）の
+無<む>垢<く>な笑<えが>顔<お>の
 
 （请至少，给我一个无暇的微笑）
 
 ki mi wo  ya ki tsu ke ta ku te
 
-君（きみ）を焼（や）きつけたくて　
+君<きみ>を焼<や>きつけたくて　
 
 （将你深深烙印在心底）
 
 ma bu ta to ji re ba
 
-まぶた閉（と）じれば
+まぶた閉<と>じれば
 
 （我闭上双眼）
 
@@ -46,51 +46,51 @@ ma bu ta to ji re ba
 
 手中的风筝放太快回不来
 
-ma yi mo do re
+ma i mo do re
 
-舞（ま）い戻（もど）れ
+舞<ま>い戻<もど>れ
 
 （花开又花谢）
 
 ha na no u mi
 
-花（はな）の海（うみ）
+花<はな>の海<うみ>
 
 （这一片花海）
 
 ya e ni sa ku
 
-八重（やえ）に咲（さ）く
+八<や>重<え>に咲<さ>く
 
 （重重盛开）
 
 na mi da shi zu me te
 
-涙（なみだ）沈（しず）めて
+涙<なみだ>沈<しず>めて
 
 （淹没了我的泪水）
 
 u mi na ri yo
 
-海鳴（うみな）りよ
+海<うみ>鳴<な>りよ
 
 （连海都在哭泣）
 
 ka na u na ra
 
-叶（かな）うなら
+叶<かな>うなら
 
 （如果可以实现）
 
 a no hi ma de
 
-あの日（ひ）まで
+あの日<ひ>まで
 
 （那一天）
 
-ka e ri ta yi
+ka e ri ta i
 
-帰（かえ）りたい
+帰<かえ>りたい
 
 （请让我回去）
 
@@ -110,43 +110,43 @@ ka e ri ta yi
 
 sa ki ho ko ru
 
-咲（さ）き誇（ほこ）る
+咲<さ>き誇<ほこ>る
 
 （在盛开的）
 
 ki mi no yu me
 
-君（きみ）の夢（ゆめ）
+君<きみ>の夢<ゆめ>
 
 （是你的梦想）
 
-o yi ka ze ni
+o i ka ze ni
 
-追（お）い風（かぜ）に
+追<お>い風<かぜ>に
 
 （追逐着风）
 
 ka ji wo ma ka se te
 
-舵（かじ）をまかせて
+舵<かじ>をまかせて
 
 （紧紧握住船舵）
 
 bo ku wa ta da
 
-僕（ぼく）はただ
+僕<ぼく>はただ
 
 （我只能够）
 
-yi no tte ru 
+i no tte ru 
 
-祈（いの）ってる
+祈<いの>ってる
 
 （祈祷着）
 
 yu me no ma ho ro ba ni su su me to
 
-夢（ゆめ）のまほろばに進（すす）めと
+夢<ゆめ>のまほろばに進<すす>めと
 
 （你能朝着梦想中的桃花源前进）
 
@@ -160,12 +160,12 @@ yu me no ma ho ro ba ni su su me to
 
 ki mi wa mo u 
 
-君（きみ）はもう
+君<きみ>はもう
 
 （你也已经）
 
-mo do ra na yi
+mo do ra na i
 
-戻（もど）らない
+戻<もど>らない
 
 （不会再回来）
