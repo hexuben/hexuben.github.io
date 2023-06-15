@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		function loadfile(filename,func){
+			let url=filename;
+			let httpRequest=new XMLHttpRequest();
+			httpRequest.open('GET',url,true);
+			httpRequest.send();
+			httpRequest.onreadystatechange=function(){
+				if (httpRequest.readyState==4 && httpRequest.status==200)
+					func(httpRequest.responseText);
+			};
+		}
+		function loadLyric(url){
+			loadfile(url, function(tmp){
+				var tmp = tmp.split('\n');
+				var lrc = new Array();
+				for(var i = 0; i < tmp.length; i++){
+					if(tmp[i] != "") lrc.push(tmp[i]);
+				}
+				var singer = new Array();
+				for(var data of lrc){
+					if(data.charAt(0) == '#'){
+						var matcher = /#([a-z]*?): (.*)/;
+						if (matcher.exec(data)){
+							var res = matcher.exec(data);
+							if(res[1] == "singer"){
+								singer = res[2].split(',');
+							}
+							singer.forEach((item) => {
+								item = item.trim();
+							});
+						}
+					} else if(data.charAt(0) == '{'){
+						var matcher = /{(.*?) (\d*?)}/;
+						if(matcher.exec(data)){
+							var instruct = matcher.exec(data);
+							if(instruct[1] == "singer"){
+								var parameter = instruct[2].split(',');
+								var code = "";
+								parameter.forEach((tmp) => {
+									code += ", " + singer[Number(tmp) - 1];
+								});
+								$("#my-lyric").append(`<p class="lyric-singer" style="color: red">${code.substring(2)}</p>`);
+							}
+						}
+					} else {
+						$("#my-lyric").append(`<p class="lyric-normal">${data}</p>`);
+					}
+					
+				}
+			});
+		};
+		$(document).ready(function(){
+			loadLyric("https://hexuben.github.io/music/花海（花の海）.txt");
+		});
+	</script>
+</head>
+<body>
+	<div class="lyric" id="my-lyric">
+		
+	</div>
+</body>
+</html>
