@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script>
 		function loadfile(filename,func){
 			let url=filename;
@@ -35,20 +36,40 @@
 							});
 						}
 					} else if(data.charAt(0) == '{'){
-						var matcher = /{(.*?) (\d*?)}/;
+						var matcher = /{(.*?) ([\d,]*?)}/;
+						// console.log(data);
 						if(matcher.exec(data)){
 							var instruct = matcher.exec(data);
+							// console.log(instruct);
 							if(instruct[1] == "singer"){
 								var parameter = instruct[2].split(',');
 								var code = "";
 								parameter.forEach((tmp) => {
 									code += ", " + singer[Number(tmp) - 1];
 								});
-								$("#my-lyric").append(`<p class="lyric-singer" style="color: red">${code.substring(2)}</p>`);
+								// console.log(parameter);
+								$("#my-lyric").append(`<p class="lyric-singer">${code.substring(2)}</p>`);
 							}
 						}
 					} else {
-						$("#my-lyric").append(`<p class="lyric-normal">${data}</p>`);
+						var a = new Array(), b = new Array();
+						var matcher1 = /(.)</g, matcher2 = /<(.*?)>/g, res;
+						while (res = matcher1.exec(data)){
+							for(var i = 1; i < res.length; i++){
+								a.push(res[i]);
+							}
+						}
+						while (res = matcher2.exec(data)){
+							for(var i = 1; i < res.length; i++){
+								b.push(res[i]);
+							}
+						}
+						var code = data;
+						code = code.replaceAll(/<.*?>/g, "");
+						for(var i = 0; i < a.length; i++){
+							code = code.replaceAll(a[i], `<ruby>${a[i]}<rt style="font-size: 80%;">${b[i]}</rt></ruby>`);
+						}
+						$("#my-lyric").append(`<p class="lyric-normal">${code}</p>`);
 					}
 					
 				}
