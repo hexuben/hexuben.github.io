@@ -13,27 +13,19 @@
 {singer 2}
 
 se me te sa i go na ra
-
 せめて最<さい>後<ご>なら　
-
 （如果这已经是最后）
 
 mu ku na  e ga o no
-
 無<む>垢<く>な笑<えが>顔<お>の
-
 （请至少，给我一个无暇的微笑）
 
 ki mi wo  ya ki tsu ke ta ku te
-
 君<きみ>を焼<や>きつけたくて　
-
 （将你深深烙印在心底）
 
 ma bu ta to ji re ba
-
 まぶた閉<と>じれば
-
 （我闭上双眼）
 
 {singer 1,2}
@@ -46,57 +38,23 @@ ma bu ta to ji re ba
 
 手中的风筝放太快回不来
 
-ma i mo do re
+ma i mo do re ha na no u mi
+舞<ま>い戻<もど>れ 花<はな>の海<うみ>
+（花开又花谢 这一片花海）
 
-舞<ま>い戻<もど>れ
+ya e ni sa ku na mi da shi zu me te
+八<や>重<え>に咲<さ>く 涙<なみだ>沈<しず>めて
+（重重盛开 淹没了我的泪水）
 
-（花开又花谢）
+u mi na ri yo ka na u na ra
+海<うみ>鳴<な>りよ 叶<かな>うなら
+（连海都在哭泣 如果可以的话）
 
-ha na no u mi
-
-花<はな>の海<うみ>
-
-（这一片花海）
-
-ya e ni sa ku
-
-八<や>重<え>に咲<さ>く
-
-（重重盛开）
-
-na mi da shi zu me te
-
-涙<なみだ>沈<しず>めて
-
-（淹没了我的泪水）
-
-u mi na ri yo
-
-海<うみ>鳴<な>りよ
-
-（连海都在哭泣）
-
-ka na u na ra
-
-叶<かな>うなら
-
-（如果可以实现）
-
-a no hi ma de
-
-あの日<ひ>まで
-
-（那一天）
-
-ka e ri ta i
-
-帰<かえ>りたい
-
-（请让我回去）
-
+a no hi ma de ka e ri ta i
+あの日<ひ>まで 帰<かえ>りたい
+（请让我回到那一天）
 
 {singer 2}
-
 
 你喜欢，站在那窗台
 
@@ -108,46 +66,20 @@ ka e ri ta i
 
 是你流的泪晕开
 
-sa ki ho ko ru
+sa ki ho ko ru ki mi no yu me
+咲<さ>き誇<ほこ>る 君<きみ>の夢<ゆめ>
+（在盛开的 是你的梦想）
 
-咲<さ>き誇<ほこ>る
+o i ka ze ni ka ji wo ma ka se te
+追<お>い風<かぜ>に 舵<かじ>をまかせて
+（追逐着风 紧紧握住船舵）
 
-（在盛开的）
-
-ki mi no yu me
-
-君<きみ>の夢<ゆめ>
-
-（是你的梦想）
-
-o i ka ze ni
-
-追<お>い風<かぜ>に
-
-（追逐着风）
-
-ka ji wo ma ka se te
-
-舵<かじ>をまかせて
-
-（紧紧握住船舵）
-
-bo ku wa ta da
-
-僕<ぼく>はただ
-
-（我只能够）
-
-i no tte ru 
-
-祈<いの>ってる
-
-（祈祷着）
+bo ku wa ta da i no tte ru 
+僕<ぼく>はただ 祈<いの>ってる
+（我只能够祈祷着）
 
 yu me no ma ho ro ba ni su su me to
-
 夢<ゆめ>のまほろばに進<すす>めと
-
 （你能朝着梦想中的桃花源前进）
 
 不要你离开，回忆划不开
@@ -158,14 +90,6 @@ yu me no ma ho ro ba ni su su me to
 
 情歌被打败，爱已不存在
 
-ki mi wa mo u 
-
-君<きみ>はもう
-
-（你也已经）
-
-mo do ra na i
-
-戻<もど>らない
-
-（不会再回来）
+ki mi wa mo u mo do ra na i
+君<きみ>はもう 戻<もど>らない
+（你也已经不会再回来）
