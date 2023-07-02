@@ -1,12 +1,27 @@
+@font-face{
+	font-family: jp-font;
+	src: url(https://hexuben.github.io/font/JiaoKeShuTi-ICA-Pror-M-otf-2.otf);
+}
+@font-face{
+	font-family: ch-font;
+	src: url(https://hexuben.github.io/font/LXGWWenKai-Bold.ttf);
+	font-weight: bold;
+}
 .lyric{
-	font-family: 'A-OTF Kyoukasho ICA Pro', '霞鹜文楷';
+	font-family: jp-font, ch-font;
 	text-align: center;
 	line-height: 100%;
+	margin: 5px;
+	max-height: 400px;
+	overflow: scroll;
 }
 .lyric-singer{
 	font-size: 120%;
 }
+.lyric-section{
+	margin: 16px;
+}
 rt{
 	font-size: 90%;
-	font-family: A-OTF Kyoukasho ICA Pro;
+	font-family: ch-font, jp-font;
 }
