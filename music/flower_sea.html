@@ -15,68 +15,78 @@
 					func(httpRequest.responseText);
 			};
 		}
-		function loadLyric(url){
+		function loadLyric(id, url){
 			loadfile(url, function(tmp){
-				var tmp = tmp.split('\n');
+				var tmp = tmp.split('\n\n');
 				var lrc = new Array();
 				for(var i = 0; i < tmp.length; i++){
-					if(tmp[i] != "") lrc.push(tmp[i]);
+					lrc.push(tmp[i].split('\n'));
 				}
+				// for(var i = 0; i < lrc.length; i++){
+				// 	console.log(lrc[i]);
+				// }
 				var singer = new Array();
-				for(var data of lrc){
-					if(data.charAt(0) == '#'){
-						var matcher = /#([a-z]*?): (.*)/;
-						if (matcher.exec(data)){
-							var res = matcher.exec(data);
-							if(res[1] == "singer"){
-								singer = res[2].split(',');
+				for(var sec of lrc){
+					var code = new String();
+					for(var data of sec){
+						if(data.charAt(0) == '#'){
+							var matcher = /#([a-z]*?): (.*)/;
+							if (matcher.exec(data)){
+								var res = matcher.exec(data);
+								if(res[1] == "singer"){
+									singer = res[2].split(',');
+									singer.forEach((item) => {
+										item = item.trim();
+									});
+								} else if (res[1] == "title"){
+									code += `<p class="lyric-title">${res[2]}</p>`;
+								}
 							}
-							singer.forEach((item) => {
-								item = item.trim();
-							});
-						}
-					} else if(data.charAt(0) == '{'){
-						var matcher = /{(.*?) ([\d,]*?)}/;
-						// console.log(data);
-						if(matcher.exec(data)){
-							var instruct = matcher.exec(data);
-							// console.log(instruct);
-							if(instruct[1] == "singer"){
-								var parameter = instruct[2].split(',');
-								var code = "";
-								parameter.forEach((tmp) => {
-									code += ", " + singer[Number(tmp) - 1];
-								});
-								// console.log(parameter);
-								$("#my-lyric").append(`<p class="lyric-singer">${code.substring(2)}</p>`);
+						} else if(data.charAt(0) == '{'){
+							var matcher = /{(.*?) ([\d,]*?)}/;
+							// console.log(data);
+							if(matcher.exec(data)){
+								var instruct = matcher.exec(data);
+								// console.log(instruct);
+								if(instruct[1] == "singer"){
+									var parameter = instruct[2].split(',');
+									var temp = "";
+									parameter.forEach((tmp) => {
+										temp += ", " + singer[Number(tmp) - 1];
+									});
+									// console.log(parameter);
+									code += `<p class="lyric-singer">${temp.substring(2)}</p>`;
+								}
 							}
-						}
-					} else {
-						var a = new Array(), b = new Array();
-						var matcher1 = /(.)</g, matcher2 = /<(.*?)>/g, res;
-						while (res = matcher1.exec(data)){
-							for(var i = 1; i < res.length; i++){
-								a.push(res[i]);
+						} else {
+							var a = new Array(), b = new Array();
+							var matcher1 = /(.)</g, matcher2 = /<(.*?)>/g, res;
+							while (res = matcher1.exec(data)){
+								for(var i = 1; i < res.length; i++){
+									a.push(res[i]);
+								}
 							}
-						}
-						while (res = matcher2.exec(data)){
-							for(var i = 1; i < res.length; i++){
-								b.push(res[i]);
+							while (res = matcher2.exec(data)){
+								for(var i = 1; i < res.length; i++){
+									b.push(res[i]);
+								}
 							}
+							var tmp = data;
+							tmp = tmp.replaceAll(/<.*?>/g, "");
+							for(var i = 0; i < a.length; i++){
+								tmp = tmp.replaceAll(a[i], `<ruby>${a[i]}<rt>${b[i]}</rt></ruby>`);
+							}
+							code += `<p class="lyric">${tmp}</p>`;
 						}
-						var code = data;
-						code = code.replaceAll(/<.*?>/g, "");
-						for(var i = 0; i < a.length; i++){
-							code = code.replaceAll(a[i], `<ruby>${a[i]}<rt style="font-size: 80%;">${b[i]}</rt></ruby>`);
-						}
-						$("#my-lyric").append(`<p class="lyric-normal">${code}</p>`);
 					}
-					
+					if (code != "") {
+						$(id).append(`<div class="lyric-section">${code}</div>`);
+					}
 				}
 			});
 		};
 		$(document).ready(function(){
-			loadLyric("https://hexuben.github.io/music/花海（花の海）.txt");
+			loadLyric("#my-lyric", "https://hexuben.github.io/music/花海（花の海）.txt");
 		});
 	</script>
 </head>
