@@ -1,0 +1,105 @@
+@font-face{
+	font-family: jp-font;
+	src: url(JiaoKeShuTi-ICA-Pror-M-otf-2.otf);
+}
+@font-face{
+	font-family: ch-font;
+	src: url(LXGWWenKai-Bold.ttf);
+	font-weight: bold;
+}
+.lyric{
+	font-family: jp-font, ch-font;
+	text-align: center;
+	line-height: 100%;
+	margin: 5px;
+}
+.lyric-box{
+	max-height: 400px;
+	overflow-y: scroll;
+	background-color: #eee;
+	margin: 10px 25px;
+}
+.lyric-singer{
+	font-size: 120%;
+}
+.lyric-section{
+	margin: 16px;
+}
+rt{
+	font-size: 90%;
+	font-family: ch-font, jp-font;
+}
+.musicPlayer{
+	background-color: #ddd;
+	padding: 5px;
+}
+.musicPlayer-smallCard{
+	--smallCardHeight: 50px;
+	height: var(--smallCardHeight);
+	padding: 0px 5px;
+	position: relative;
+	/* width: 80%; */
+}
+.roundButton{
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	font-size: 16px;
+	background-color: transparent;
+	border-color: transparent;
+	padding: 0;
+	color: black;
+	text-align: center;
+	animation: buttonHoverr 300ms;
+	margin: calc((var(--smallCardHeight) - 30px) / 2) 0px;
+}
+.roundButton:hover{
+	background-color: #bbb;
+	animation: buttonHover 300ms;
+}
+@keyframes buttonHover{
+	from {background-color: transparent; }
+	to {background-color: #bbb; }
+}
+@keyframes buttonHoverr{
+	from {background-color: #bbb; }
+	to {background-color: transparent; }
+}
+.musicPlayer-cardText{
+	color: #888;
+	font-size: 14px;
+	margin: 5px 10px;
+	display: inline-block;
+	width: 30%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.musicPlayer-progress-container{
+	--myWidth: 5px;
+	--progress: 50%;
+	border-radius: calc(var(--myWidth) / 2);
+	width: 100%;
+	/* display: inline-block; */
+}
+.musicPlayer-smallCard-middleContainer{
+	width: 70%;
+	display: inline-block;
+	margin: calc((var(--smallCardHeight) - 43px) / 2) 5px;
+	position: relative;
+	top: -2px;
+}
+.musicPlayer-progress-back{
+	border-radius: calc(var(--myWidth) / 2);
+	background-color: #bbb;
+	height: var(--myWidth);
+	position: relative;
+}
+.musicPlayer-progress-front{
+	border-radius: calc(var(--myWidth) / 2);
+	background-color: #666;
+	height: var(--myWidth);
+	position: relative;
+	top: calc(0px - var(--myWidth));
+	bottom: 0px;
+	width: var(--progress);
+}
