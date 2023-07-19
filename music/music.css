@@ -1,10 +1,10 @@
 @font-face{
 	font-family: jp-font;
-	src: url(JiaoKeShuTi-ICA-Pror-M-otf-2.otf);
+	src: url(https://hexuben.github.io/font/JiaoKeShuTi-ICA-Pror-M-otf-2.otf);
 }
 @font-face{
 	font-family: ch-font;
-	src: url(LXGWWenKai-Bold.ttf);
+	src: url(https://hexuben.github.io/font/LXGWWenKai-Bold.ttf);
 	font-weight: bold;
 }
 .lyric{
