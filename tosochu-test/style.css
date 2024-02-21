@@ -1,0 +1,44 @@
+body {
+    font-size: 16px;
+}
+
+.tab {
+    background-color: #888;
+}
+
+.container {
+    margin: 20px 10px;
+    padding: 5px 10px;
+}
+
+.control-container {
+    background-color: #ddd;
+}
+
+.control-major {
+    background-color: #aaa;
+}
+
+.major-click {
+    background-color: #888;
+}
+
+.control-sub {
+    display: none;
+}
+
+div.control-sub-chosen {
+    display: block;
+}
+
+.display-container {
+    background-color: #888;
+}
+
+.display-option{
+    background-color: #aaa;
+}
+
+.display-option-chosen{
+    background-color: #ddd;
+}
