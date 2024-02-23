@@ -2,24 +2,24 @@ var answer = new Object();
 
 function displayProblem(problem, problemid) {
     if (problem.type.indexOf("option") !== -1) {
-        $(`.display-container`).append(`<p class="display-stem">
+        $(`.display-main`).append(`<p class="display-stem">
             ${problem.stem}
             </p>`);
         for (var choice in problem.option) {
             if (problem.type === "single-option") {
                 if (answer[problemid] === +choice) {
-                    $(`.display-container`).append(`<div class="display-option-chosen" option-id="${choice}" problem-id="${problemid}">
+                    $(`.display-main`).append(`<div class="display-option-chosen" option-id="${choice}" problem-id="${problemid}">
                         ${problem.option[choice]}</div>`);
                 } else {
-                    $(`.display-container`).append(`<div class="display-option" option-id="${choice}" problem-id="${problemid}">
+                    $(`.display-main`).append(`<div class="display-option" option-id="${choice}" problem-id="${problemid}">
                         ${problem.option[choice]}</div>`);
                 }
             } else {
                 if (answer[problemid][+choice] === 1) {
-                    $(`.display-container`).append(`<div class="display-option-chosen" option-id="${choice}" problem-id="${problemid}">
+                    $(`.display-main`).append(`<div class="display-option-chosen" option-id="${choice}" problem-id="${problemid}">
                         ${problem.option[choice]}</div>`);
                 } else {
-                    $(`.display-container`).append(`<div class="display-option" option-id="${choice}" problem-id="${problemid}">
+                    $(`.display-main`).append(`<div class="display-option" option-id="${choice}" problem-id="${problemid}">
                         ${problem.option[choice]}</div>`);
                 }
             }
@@ -139,37 +139,37 @@ $(document).ready(() => {
         }
     }
     problems.structure.forEach((major, majorIndex) => {
-        $(".control-container").append(
+        $(".control-main").append(
             `<div class="control-major" major-id="${majorIndex}">
-                major ${majorIndex + 1}: ${major.title.length} title(s)
-                <span class="major-click" click-id="${majorIndex}">go</span>
+                <div style="display: flex;">
+                <span class="control-questionNumber">${majorIndex + 1}</span>
+                <span class="rightSpace"></span>
+                共 ${major.title.length} 小题
+                <button class="control-major-click" click-id="${majorIndex}">
+                    <i class="fa fa-solid fa-list" style="font-size: 12px;"></i>
+                </button>
+                </div>
             </div>
             <div class="control-sub" sub-id="${majorIndex}">
             </div>`
         );
         var span = $(`div[sub-id='${majorIndex}']`);
         major.title.forEach((sub, subIndex) => {
-            span.append(`<button class="control-chooser" data-id="${majorIndex}-${subIndex}">
+            span.append(`<span class="control-chooser" data-id="${majorIndex}-${subIndex}">
                 ${subIndex + 1}
-            </button>`);
-            $(`button[data-id='${majorIndex}-${subIndex}']`).click(() => {
-                $(`.display-container`).html(`<p class="display-showing">
+            </span>`);
+            $(`[data-id='${majorIndex}-${subIndex}']`).click(() => {
+                $(`.display-main`).html(`<p class="display-showing">
                     Showing problem ${majorIndex + 1} - ${subIndex + 1}
                     </p>`);
-                $(`.display-container`).append(`<p class="display-stem display-major-stem">
+                $(`.display-main`).append(`<p class="display-stem display-major-stem">
                     ${major.stem}
                     </p>`);
                 displayProblem(problems.bank[sub], sub);
             });
         })
         $(`[click-id='${majorIndex}']`).click(() => {
-            if (span.hasClass("control-sub")) {
-                span.removeClass("control-sub");
-                span.addClass("control-sub-chosen");
-            } else {
-                span.addClass("control-sub");
-                span.removeClass("control-sub-chosen");
-            }
+            span.slideToggle(200);
         });
     });
 });

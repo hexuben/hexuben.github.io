@@ -11,7 +11,6 @@ window.problems = {
                 "3",
                 "4",
                 "5"],
-            correct: 0
         }, 2: {
             type: "single-option",
             stem: "1+2=?",
@@ -19,7 +18,6 @@ window.problems = {
                 "3",
                 "4",
                 "5"],
-            correct: 1
         }, 3: {
             type: "multiple-option",
             stem: "1,3,?",
@@ -27,12 +25,11 @@ window.problems = {
                 "5",
                 "6",
                 "7"],
-            correct: [1, 3]
         }
     },
     structure: [
-        { stem: "major 1", title: [1, 2] },
-        { stem: "major 2", title: [3] }
+        { stem: "major 1", breif: "单选题", title: [1, 2] },
+        { stem: "major 2", breif: "多选题", title: [3] }
     ]
 }
 

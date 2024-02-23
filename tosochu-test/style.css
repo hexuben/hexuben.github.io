@@ -1,44 +1,88 @@
+/*rgba(220,240,255,.5)*/
+
 body {
+    margin: 0;
     font-size: 16px;
+    /* background-image: url("background.jpg"); */
+    background-repeat: no-repeat;
+    background-color: black;
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    background-position: center top;
+    font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", Osaka, "Lucida Grande", Verdana, "ＭＳ Ｐゴシック", sans-serif;
 }
 
 .tab {
-    background-color: #888;
+    background-color: rgb(85, 85, 85);
 }
 
 .container {
-    margin: 20px 10px;
+    margin: 10px 20px;
     padding: 5px 10px;
 }
 
-.control-container {
-    background-color: #ddd;
+.rightSpace {
+    flex: 1;
+}
+
+.item-innerGrid {
+    margin: 0 30px;
+    padding: 10px 10px;
+    background-image: url("pic/grid.png");
+}
+
+.item-top {
+    height: 32px;
+    background-image: url("pic/top.png");
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.item-footer {
+    height: 32px;
+    background-image: url("pic/footer.png");
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.item-body {
+    background-image: url("pic/body.png");
+    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .control-major {
-    background-color: #aaa;
+    background-color: rgba(180, 15, 15, 0.75);
+    border: 1px solid rgb(180, 15, 15);
+    color: rgb(255, 255, 255);
+    font-family: 'Songti';
+    margin: 10px 0 0 0;
+    padding: 5px 5px;
 }
 
-.major-click {
-    background-color: #888;
+.control-questionNumber {
+    padding: 0px 10px;
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+.control-major-click {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 100%;
+    /* width: 20px;
+    height: 20px; */
 }
 
 .control-sub {
     display: none;
+    background-color: rgba(180, 15, 15, 0.75);
+    border: 1px solid rgb(180, 15, 15);
+    border-top: none;
+    margin: 5px 5px;
 }
 
-div.control-sub-chosen {
-    display: block;
-}
-
-.display-container {
-    background-color: #888;
-}
-
-.display-option{
-    background-color: #aaa;
-}
-
-.display-option-chosen{
-    background-color: #ddd;
+.display-main {
+    color: rgb(255, 255, 255);
 }
