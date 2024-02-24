@@ -7,6 +7,7 @@ function displayProblem(problem, problemid) {
             </p>`);
         for (var choice in problem.option) {
             if (problem.type === "single-option") {
+                console.log(answer[problemid]);
                 if (answer[problemid] === +choice) {
                     $(`.display-main`).append(`<div class="display-option-chosen" option-id="${choice}" problem-id="${problemid}">
                         ${problem.option[choice]}</div>`);
@@ -155,13 +156,10 @@ $(document).ready(() => {
         );
         var span = $(`div[sub-id='${majorIndex}']`);
         major.title.forEach((sub, subIndex) => {
-            span.append(`<span class="control-chooser" data-id="${majorIndex}-${subIndex}">
-                ${subIndex + 1}
-            </span>`);
+            span.append(`<span class="control-chooser" data-id="${majorIndex}-${subIndex}">${subIndex + 1}</span>`);
             $(`[data-id='${majorIndex}-${subIndex}']`).click(() => {
-                $(`.display-main`).html(`<p class="display-showing">
-                    Showing problem ${majorIndex + 1} - ${subIndex + 1}
-                    </p>`);
+                $(`.display-main`).html(`<span class="display-showing">第 ${majorIndex + 1} 大题</span>
+                    <span class="display-showing">第 ${subIndex + 1} 小题</span>`);
                 $(`.display-main`).append(`<p class="display-stem display-major-stem">
                     ${major.stem}
                     </p>`);
